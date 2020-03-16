@@ -550,6 +550,7 @@ Argument DICTIONARY-LIST the word that need transform."
     ;; Get translate object.
     (or word (setq word (sdcv-region-or-word)))
 
+    (and (region-active-p) (deactivate-mark))
     ;; Record current translate object.
     (setq sdcv-current-translate-object word)
     ;; Get translate result.
